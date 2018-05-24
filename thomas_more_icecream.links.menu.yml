@@ -1,0 +1,15 @@
+thomas_more_icecream.treshold_instellen:
+  title: 'Treshold instellen'
+  parent: system.admin_config_ui
+  description: 'threshold instellen.'
+  route_name: thomas_more_icecream.treshold_instellen
+thomas_more_icecream.smaken_kiezen:
+  title: 'Smaken beheren'
+  parent: system.admin_config_ui
+  description: 'Smaken bepalen.'
+  route_name: thomas_more_icecream.smaken_kiezen
+thomas_more_icecream.topping_kiezen:
+  title: 'Toppings beheren'
+  parent: system.admin_config_ui
+  description: 'toppings bepalen.'
+  route_name: thomas_more_icecream.topping_kiezen

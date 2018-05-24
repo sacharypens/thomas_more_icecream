@@ -1,0 +1,18 @@
+thomas_more_icecream.smaken_kiezen:
+  path: 'admin/thomas-more-icecream/smaken-kiezen'
+  defaults:
+    _form: 'Drupal\thomas_more_icecream\Form\SmakenKiezenForm'
+  requirements:
+    _permission: 'access administration pages'
+thomas_more_icecream.treshold_instellen:
+  path: 'admin/thomas-more-icecream/treshold-instellen'
+  defaults:
+    _form: 'Drupal\thomas_more_icecream\Form\TresholdIcecreamInstellenForm'
+  requirements:
+    _permission: 'access administration pages'
+thomas_more_icecream.topping_kiezen:
+  path: 'admin/thomas-more-icecream/topping-kiezen'
+  defaults:
+    _form: 'Drupal\thomas_more_icecream\Form\ToppingsKiezenForm'
+  requirements:
+    _permission: 'access administration pages'

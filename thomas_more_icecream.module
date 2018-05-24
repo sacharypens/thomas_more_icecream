@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function thomas_more_icecream_theme() {
+  return [
+    'icecream' => [
+      'variables' => [
+
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_mail().
+ */
+function thomas_more_icecream_mail($key, &$message, $params) {
+$options = array(
+  'langcode' => $message['nl'],
+);
+ switch ($key) {
+   case 'create_article':
+     $message['from'] = \Drupal::config('system.site')->get('mail');
+     $message['subject'] = t('@title', array('@title' => $params['node_title']), $options);
+     $message['body'][] = $params['message'];
+     break;
+ }
+}

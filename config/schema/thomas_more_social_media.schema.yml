@@ -1,0 +1,7 @@
+thomas_more_icecream.config:
+  type: config_object
+  label: 'Example config'
+  mapping:
+    message:
+      type: text
+      label: 'Message'

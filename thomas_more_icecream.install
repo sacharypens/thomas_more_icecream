@@ -1,0 +1,48 @@
+<?php
+
+function thomas_more_icecream_schema() {
+  $schema['thomas_more_icecream'] = [
+    'fields' => [
+      'id' => [
+        'description' => 'The primary identifier.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'bestelling' => [
+        'description' => 'keeps the chose of the user',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'extra' => [
+        'description' => 'keeps the extra information of the order of the user',
+        'type' => 'varchar',
+        'length' => 200,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'time_clicked' => [
+        'description' => 'The Unix timestamp when the user clicked on an social media icon.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'primary key' => [
+      'id',
+    ],
+  ];
+
+  return $schema;
+}
+
+/**
+ * Create Thomas More icecream table.
+ */
+function thomas_more_icecream_update_8001(&$sandbox) {
+  $table = thomas_more_icecream_schema();
+  \Drupal::database()->schema()->createTable('thomas_more_icecream', $table['thomas_more_icecream']);
+}
